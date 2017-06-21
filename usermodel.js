@@ -1,3 +1,4 @@
+var db = require('./db.js');
 var User = {
   getDB: function() {
     return "HELLO";

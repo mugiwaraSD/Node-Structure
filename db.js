@@ -8,11 +8,11 @@ var db = mongoose.connection;
 db.once('open', function() {
     console.log('MongoDB Successfully Connected!');
     Person.find({}, function(err, docs) {
-    if (!err){ 
-        console.log(docs);
-        process.exit();
-    } else {throw err;}
-  });
+        if (!err){ 
+            console.log(docs);
+            process.exit();
+        } else {throw err;}
+    });
 });
 
 var personSchema = new Schema({
